@@ -1,0 +1,535 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Divisiones de Video</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        h1, h2, h3 {
+            color: #333;
+            text-align: center;
+        }
+        .section {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+        }
+        .video-item {
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+        .video-item:hover {
+            transform: scale(1.05);
+        }
+        .video-thumbnail {
+            width: 100%;
+            height: 0;
+            padding-bottom: 100%;
+            position: relative;
+        }
+        .video-thumbnail iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .video-title {
+            padding: 10px;
+            text-align: center;
+            font-size: 14px;
+        }
+        .accordion {
+            background-color: #f1f1f1;
+            color: #444;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            text-align: left;
+            border: none;
+            outline: none;
+            transition: 0.4s;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .active, .accordion:hover {
+            background-color: #ddd;
+        }
+        .panel {
+            padding: 0 18px;
+            background-color: white;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+        }
+        .calendar-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+    }
+
+    .calendar-table th, .calendar-table td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: center;
+    }
+
+    .calendar-table th {
+        background-color: #f2f2f2;
+    }
+
+    .calendar-table .content {
+        background-color: #e6f3ff;
+        font-size: 12px;
+    }
+
+    .calendar h3 {
+        margin-top: 20px;
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Divisiones de Video</h1>
+
+        <div class="section">
+            <h2>Imagen de marca</h2>
+            <div class="video-grid">
+                <div class="video-item">
+                    <div class="video-thumbnail">
+                        <iframe src="https://www.instagram.com/reel/C-tW91kRtLF/embed" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+                    </div>
+                    <div class="video-title">Opcion video de relleno para un dia de la semana</div>
+                </div>
+                <div class="video-item">
+                    <div class="video-thumbnail">
+                        <iframe src="https://www.instagram.com/reel/C_VujIcIVjx/embed" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+                    </div>
+                    <div class="video-title">Puede ser otra opcion para el primner vide de instagram</div>
+                </div>
+                <div class="video-item">
+                    <div class="video-thumbnail">
+                        <iframe src="https://www.instagram.com/reel/C9jnm80iq0V/embed" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+                    </div>
+                    <div class="video-title"> Me gusta para que sea el primer video del instagram</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Muestra del producto</h2>
+            <h3>Divertida</h3>
+            <div class="video-grid">
+                <div class="video-item">
+                    <div class="video-thumbnail">
+                        <iframe src="https://www.instagram.com/reel/DBowEq0CovL/embed" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+                    </div>
+                    <div class="video-title"></div>
+                </div>
+                <div class="video-item">
+                    <div class="video-thumbnail">
+                        <iframe src="https://www.instagram.com/reel/C7qtq0XqD_3/embed" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+                    </div>
+                    <div class="video-title"></div>
+                </div>
+                <div class="video-item">
+                    <div class="video-thumbnail">
+                        <iframe src="https://www.instagram.com/reel/C-bWMQvuKoC/embed" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+                    </div>
+                    <div class="video-title"></div>
+                </div>
+                <div class="video-item">
+                    <div class="video-thumbnail">
+                        <iframe src="https://www.instagram.com/reel/C8NqgAps9Zr/embed" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+                    </div>
+                    <div class="video-title"></div>
+                </div>
+                <div class="video-item">
+                    <div class="video-thumbnail">
+                        <iframe src="https://www.instagram.com/reel/C_oOqw-IqmF/embed" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+                    </div>
+                    <div class="video-title"></div>
+                </div>
+                <div class="video-item">
+                    <div class="video-thumbnail">
+                        <iframe src="https://www.instagram.com/reel/C92HQ8TxVL0/embed" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+                    </div>
+                    <div class="video-title"></div>
+                </div>
+            </div>
+            <h3>Profesional</h3>
+            <div class="video-grid">
+                <div class="video-item">
+                    <div class="video-thumbnail">
+                        <iframe src="https://www.instagram.com/reel/C_zejBtBXds/embed" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+                    </div>
+                    <div class="video-title">Fotos para el producto</div>
+                </div>
+                <div class="video-item">
+                    <div class="video-thumbnail">
+                        <iframe src="https://www.instagram.com/p/CiA_BPCjWf4/embed" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+                    </div>
+                    <div class="video-title">Proceso de la hamburguesa</div>
+                </div>
+                
+            </div>
+            <div class="section">
+                <h2>Ideas adicionales para fotos y videos</h2>
+                <button class="accordion">Haz clic para ver más ideas</button>
+                <div class="panel">
+                    <h3>Fotografía</h3>
+                    <ul>
+                        <li>Toma de cerca (macro) mostrando los detalles jugosos de la carne y las texturas de los ingredientes.</li>
+                        <li>Captura el momento en que se presiona la hamburguesa y el jugo gotea.</li>
+                        <li>Haz una foto desde arriba (flat lay) con la hamburguesa rodeada de ingredientes frescos.</li>
+                        <li>Crea un entorno con la hamburguesa como protagonista, acompañada de elementos como papas fritas, salsas y una bebida fría.</li>
+                        <li>Fotografía la hamburguesa en un entorno urbano o con un fondo que refleje el estilo de vida del público objetivo.</li>
+                    </ul>
+    
+                    <h3>Video</h3>
+                    <ul>
+                        <li>Graba un video corto mostrando el proceso de armado de la hamburguesa, capa por capa.</li>
+                        <li>Crea un video en cámara lenta del momento en que se muerde la hamburguesa, capturando la textura y jugosidad.</li>
+                        <li>Haz un time-lapse del proceso de cocción de la carne en la parrilla.</li>
+                        <li>Graba un video ASMR con los sonidos crujientes de la hamburguesa al morderla o del proceso.</li>
+                        <li>Crea un reel mostrando diferentes variaciones de hamburguesas en secuencia rápida.</li>
+                    </ul>
+    
+                    <h3>Ideas adicionales</h3>
+                    <ul>
+                        <li>Utiliza iluminación creativa para resaltar los colores y texturas de la hamburguesa.</li>
+                        <li>Incorpora elementos de movimiento, como salsas cayendo o queso derritiéndose.</li>
+                        <li>Muestra manos sosteniendo o interactuando con la hamburguesa para dar una sensación más personal y cercana.</li>
+                        <li>Experimenta con fondos coloridos o texturas interesantes que complementen la hamburguesa.</li>
+                        <li>Crea una serie de fotos o videos mostrando el "antes y después" de morder la hamburguesa.</li>
+                        <li>Utiliza props divertidos o inesperados que apelen al público joven, como juguetes retro o elementos pop.</li>
+                        <li>Haz un video tutorial rápido de cómo preparar una hamburguesa gourmet en casa.</li>
+                        <li>Crea contenido que muestre el contraste entre una hamburguesa casera y una de comida rápida.</li>
+                    </ul>
+    
+                </div>
+            </div>
+
+        </div>
+
+        <div class="section">
+            <h2>Evento</h2>
+            <div class="video-grid">
+                <div class="video-item">
+                    <div class="video-thumbnail">
+                        <iframe src="https://www.instagram.com/reel/DA_0HTIpYzf/embed" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+                    </div>
+                    <div class="video-title">Cronologia del evento</div>
+                </div>
+                <div class="video-item">
+                    <div class="video-thumbnail">
+                        <iframe src="https://www.instagram.com/reel/DAtwamRRLB6/embed" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+                    </div>
+                    <div class="video-title">Instagram cambio de día a noche</div>
+                </div>
+                <div class="video-item">
+                    <div class="video-thumbnail">
+                        <iframe src="https://www.instagram.com/reel/CgclxlIjfZD/embed" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+                    </div>
+                    <div class="video-title">Cronologia del dia del evento</div>
+                </div>
+                <div class="video-item">
+                    <div class="video-thumbnail">
+                        <iframe src="https://www.instagram.com/reel/CgCEmvdgb-k/embed" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+                    </div>
+                    <div class="video-title">Sacar tomas de la gente comiendo</div>
+                </div>
+            </div>
+            <div class="section">
+                <h2>Ideas para el evento de hamburguesas</h2>
+                <button class="accordion">Haz clic para ver ideas del evento</button>
+                <div class="panel">
+                    <h3>Preparación y ambiente</h3>
+                    <ul>
+                        <li>Time-lapse del montaje del evento, mostrando cómo se transforma el espacio.</li>
+                        <li>Planos detalle de la decoración, enfocando elementos temáticos relacionados con hamburguesas y cerveza.</li>
+                        <li>Tomas de los cocineros preparando las hamburguesas, capturando la parrilla en acción.</li>
+                        <li>Imágenes de la barra de bebidas, mostrando la variedad de cervezas y cócteles disponibles.</li>
+                    </ul>
+    
+                    <h3>Llegada de invitados y degustación</h3>
+                    <ul>
+                        <li>Vídeo de bienvenida, capturando las reacciones de los invitados al llegar.</li>
+                        <li>Fotos de los invitados probando las diferentes hamburguesas, enfocando sus expresiones de satisfacción.</li>
+                        <li>Planos detalle de las hamburguesas siendo servidas, resaltando sus ingredientes y presentación.</li>
+                        <li>Time-lapse o vídeo acelerado mostrando cómo se llena el espacio de gente.</li>
+                    </ul>
+    
+                    <h3>Actividades y juegos</h3>
+                    <ul>
+                        <li>Vídeo del torneo de beer pong, capturando los momentos más emocionantes y divertidos.</li>
+                        <li>Secuencia de fotos del reto de comer hamburguesas, mostrando a los participantes en acción.</li>
+                        <li>Toma del momento en que se anuncia y premia a los ganadores con las camisetas de la marca.</li>
+                        <li>Fotos de grupo de los participantes en los juegos, mostrando el ambiente festivo.</li>
+                    </ul>
+    
+                    <h3>Transición a la noche</h3>
+                    <ul>
+                        <li>Time-lapse mostrando cómo cambia la iluminación y el ambiente del evento del día a la noche.</li>
+                        <li>Vídeos cortos de la gente bailando o socializando con sus bebidas.</li>
+                        <li>Fotos de los platos adicionales que se sirven por la noche, además de las hamburguesas.</li>
+                    </ul>
+    
+                    <h3>Detalles y momentos especiales</h3>
+                    <ul>
+                        <li>Primer plano de las manos sosteniendo hamburguesas y cervezas, capturando la esencia del evento.</li>
+                        <li>Vídeos en cámara lenta de la cerveza siendo servida en vasos.</li>
+                        <li>Fotos de los invitados interactuando con los cocineros o bartenders.</li>
+                        <li>Imágenes de detalles como las salsas, los ingredientes frescos o la parrilla en acción.</li>
+                    </ul>
+    
+                    <h3>Contenido para redes sociales</h3>
+                    <ul>
+                        <li>Crear un hashtag específico para el evento y animar a los invitados a usarlo en sus publicaciones.</li>
+                        <li>Grabar historias de Instagram mostrando diferentes momentos del evento a lo largo del día.</li>
+                        <li>Hacer un reel con los momentos más destacados del evento, incluyendo la preparación, los juegos y la fiesta nocturna.</li>
+                        <li>Capturar boomerangs de momentos divertidos como el brindis o el momento de morder las hamburguesas.</li>
+                    </ul>
+    
+                    <h3>Ideas adicionales</h3>
+                    <ul>
+                        <li>Entrevistas cortas a los invitados pidiendo su opinión sobre las hamburguesas y el evento.</li>
+                        <li>Vídeo del proceso de creación de una hamburguesa desde el inicio hasta el emplatado.</li>
+                        <li>Fotos antes y después de los platos de hamburguesas, mostrando cómo quedan los platos vacíos.</li>
+                        <li>Time-lapse de una hamburguesa siendo consumida, desde el primer bocado hasta el último.</li>
+                        <li>chica paseando con una bandeja llena de hamburguesas</li>
+                    </ul>
+    
+               </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Para anunciar nuevo contenido/evento</h2>
+            <div class="video-grid">
+                <div class="video-item">
+                    <div class="video-thumbnail">
+                        <iframe src="https://www.instagram.com/reel/C9NOq_5xm9H/embed" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+                    </div>
+                    <div class="video-title">Instagram puede servir para un evento próximo, dar algún comunicado una fecha exacta</div>
+                </div>
+                <div class="video-item">
+                    <div class="video-thumbnail">
+                        <iframe src="https://www.instagram.com/reel/C_Q8li_P6zV/embed" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+                    </div>
+                    <div class="video-title">Instagram puede servir para un evento próximo, dar algún comunicado una fecha exacta</div>
+                </div>
+                <div class="video-item">
+                    <div class="video-thumbnail">
+                        <iframe src="https://www.instagram.com/reel/DACE54eMaVp/embed" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+                    </div>
+                    <div class="video-title">Instagram se viene nueva hamburguesa</div>
+                </div>
+                <div class="video-item">
+                    <div class="video-thumbnail">
+                        <iframe src="https://www.instagram.com/reel/C8v_rYFqsc3/embed" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+                    </div>
+                    <div class="video-title">Instagram se viene nueva hamburguesa</div>
+                </div>
+                <div class="video-item">
+                    <div class="video-thumbnail">
+                        <iframe src="https://www.instagram.com/reel/C9yVU0JPNu-/embed" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+                    </div>
+                    <div class="video-title">Instagram para subir historia de publicaciones profesionales</div>
+                </div>
+                <div class="video-item">
+                    <div class="video-thumbnail">
+                        <iframe src="https://www.instagram.com/reel/C929kI0tw1f/embed" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+                    </div>
+                    <div class="video-title">Instagram para subir historia de encuestas profesionales</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Tips gancho/ias</h2>
+            <div class="video-grid">
+                <div class="video-item">
+                    <div class="video-thumbnail">
+                        <iframe src="https://www.instagram.com/reel/DBJoOYroNNn/embed" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+                    </div>
+                    <div class="video-title">Instagram gancho</div>
+                </div>
+                <div class="video-item">
+                    <div class="video-thumbnail">
+                        <iframe src="https://www.instagram.com/reel/C_klEOoIw8N/embed" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+                    </div>
+                    <div class="video-title">Instagram todos los clips de caídas, golpes ect para hacer transiciones</div>
+                </div>
+                <div class="video-item">
+                    <div class="video-thumbnail">
+                        <iframe src="https://www.instagram.com/reel/DAGYwHzO-gx/embed" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+                    </div>
+                    <div class="video-title">Instagram ia de fotos</div>
+                </div>
+                <div class="video-item">
+                    <div class="video-thumbnail">
+                        <iframe src="https://www.instagram.com/reel/DAtwamRRLB6/embed" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+                    </div>
+                    <div class="video-title">Instagram cambio de día a noche (para el día del evento)</div>
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <h2>Calendario de Contenido</h2>
+            <div class="calendar">
+                <h3>Diciembre 2024</h3>
+                <table class="calendar-table">
+                    <tr>
+                        <th>Lun</th><th>Mar</th><th>Mié</th><th>Jue</th><th>Vie</th><th>Sáb</th><th>Dom</th>
+                    </tr>
+                    <tr>
+                        <td></td><td></td><td></td><td></td><td></td><td></td><td>1</td>
+                    </tr>
+                    <tr>
+                        <td class="content">2<br>Video de imagen de marca (estilo profesional)</td>
+                        <td>3</td>
+                        <td class="content">4<br>Foto de producto (hamburguesa del mes)</td>
+                        <td>5</td>
+                        <td class="content">6<br>Video del proceso de creación de una hamburguesa</td>
+                        <td>7</td>
+                        <td>8</td>
+                    </tr>
+                    <tr>
+                        <td class="content">9<br>Reel con tips para preparar la hamburguesa perfecta</td>
+                        <td>10</td>
+                        <td class="content">11<br>Video de imagen de marca (enfoque en el equipo)</td>
+                        <td>12</td>
+                        <td class="content">13<br>Teaser del evento próximo (primera imagen o video del montaje)</td>
+                        <td>14</td>
+                        <td>15</td>
+                    </tr>
+                    <tr>
+                        <td class="content">16<br>Video corto mostrando la preparación del evento</td>
+                        <td>17</td>
+                        <td class="content">18<br>Reel con highlights del evento (día 1)</td>
+                        <td>19</td>
+                        <td class="content">20<br>Foto de los ganadores del reto de comida</td>
+                        <td>21</td>
+                        <td>22</td>
+                    </tr>
+                    <tr>
+                        <td class="content">23<br>Video del torneo de beer pong</td>
+                        <td>24</td>
+                        <td>25</td>
+                        <td>26</td>
+                        <td class="content">27<br>Recopilación de fotos de los invitados disfrutando las hamburguesas</td>
+                        <td>28</td>
+                        <td>29</td>
+                    </tr>
+                    <tr>
+                        <td class="content">30<br>Video de la transición del evento del día a la noche</td>
+                        <td>31</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>
+        
+                <h3>Enero 2025</h3>
+                <table class="calendar-table">
+                    <tr>
+                        <th>Lun</th><th>Mar</th><th>Mié</th><th>Jue</th><th>Vie</th><th>Sáb</th><th>Dom</th>
+                    </tr>
+                    <tr>
+                        <td></td><td></td><td>1</td><td>2</td>
+                        <td class="content">3<br>Reel con los momentos más divertidos del evento</td>
+                        <td>4</td><td>5</td>
+                    </tr>
+                    <tr>
+                        <td class="content">6<br>Video de agradecimiento a los participantes del evento</td>
+                        <td>7</td>
+                        <td class="content">8<br>Foto de producto (nueva hamburguesa del mes)</td>
+                        <td>9</td>
+                        <td class="content">10<br>Reel con entrevistas cortas a los invitados del evento</td>
+                        <td>11</td><td>12</td>
+                    </tr>
+                    <tr>
+                        <td class="content">13<br>Video de imagen de marca (enfoque en los valores de la empresa)</td>
+                        <td>14</td>
+                        <td class="content">15<br>Video del proceso de creación de una hamburguesa gourmet</td>
+                        <td>16</td><td>17</td><td>18</td><td>19</td>
+                    </tr>
+                </table>
+            </div>
+        
+            <button class="accordion">Estrategia de publicación</button>
+            <div class="panel">
+                <ul>
+                    <li><strong>Consistencia:</strong> Publica los lunes, miércoles y viernes para establecer una rutina que tus seguidores puedan anticipar.</li><br>
+                    <li><strong>Variedad de contenido:</strong>
+                        <ul>
+                            <li>Lunes: Enfócate en videos de marca o contenido más elaborado.</li>
+                            <li>Miércoles: Alterna entre fotos de producto y contenido del evento.</li>
+                            <li>Viernes: Publica contenido más ligero o divertido para iniciar el fin de semana.</li>
+                        </ul>
+                    </li><br>
+                    <li><strong>Horarios:</strong> Publica cuando tu audiencia esté más activa. Prueba diferentes horarios y analiza cuáles generan más engagement:
+                        <ul>
+                            <li>Mañana: 7:00-9:00 (para quienes revisan sus redes al despertar)</li>
+                            <li>Mediodía: 12:00-14:00 (durante la hora del almuerzo)</li>
+                            <li>Tarde: 17:00-19:00 (después del trabajo)</li>
+                        </ul>
+                    </li><br>
+                    <li><strong>Hashtags:</strong> Usa 5-9 hashtags relevantes por post. Incluye tu hashtag de marca y el específico del evento en todas las publicaciones relacionadas.</li><br>
+                    <li><strong>Stories diarias:</strong> Complementa tus posts principales con stories diarias para mantener la presencia constante:
+                        <ul>
+                            <li>Martes y jueves: Comparte contenido detrás de escenas o "sneak peeks" de próximos posts.</li>
+                            <li>Fines de semana: Interactúa con tu audiencia mediante encuestas, preguntas o compartiendo contenido generado por usuarios.</li>
+                        </ul>
+                    </li><br>
+                    <li><strong>Contenido del evento:</strong> Distribuye el contenido del evento a lo largo de varias semanas, mezclándolo con otro contenido para mantener la variedad.</li><br>
+                    <li><strong>Interacción:</strong> Dedica tiempo cada día para responder comentarios y mensajes directos. Fomenta la participación con preguntas en los pies de foto.</li><br>
+                    <li><strong>Contenido generado por usuarios:</strong> Los martes, comparte en stories el mejor contenido creado por tus seguidores durante el evento.</li><br>
+                    <li><strong>Promoción cruzada:</strong> Anuncia tus posts de Instagram en otras plataformas para aumentar la visibilidad.</li><br>
+                    <li><strong>Análisis y ajuste:</strong> Revisa las estadísticas de Instagram semanalmente y ajusta tu estrategia según el rendimiento de tus posts.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.maxHeight) {
+                    panel.style.maxHeight = null;
+                } else {
+                    panel.style.maxHeight = panel.scrollHeight + "px";
+                }
+            });
+        }
+    </script>
+</body>
+</html>
